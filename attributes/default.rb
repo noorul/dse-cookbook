@@ -27,7 +27,7 @@ default['cassandra']['packages']               = ['dse-libcassandra',
                                                   'dse-demos'
                                                  ]
 
-unless node['cassandra']['dse_version'].match(/4\.0.*/)
+unless node['cassandra']['dse_version'].match(/4\..*/)
   default['cassandra']['packages'] << 'dse-libspark'
 end
 
